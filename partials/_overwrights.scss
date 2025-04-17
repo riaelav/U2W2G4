@@ -5,17 +5,20 @@
 @import "../bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
-$dark: black;
 
+//btn padding
 $btn-padding-y: 0.75rem;
 $btn-padding-x: 2.5rem;
+//grid gutter
 $grid-gutter-width: 0.5rem;
-$card-bg: $dark;
-$card-color: white;
+
+//card
 $card-border-radius: 2rem;
+//custom colors
 $danger: #ff0077;
 $info: #00ffea;
 $light: #f3eeff;
+//border radius
 $badge-border-radius: 50px;
 $input-border-radius: 50px;
 $btn-border-radius: 50px;
@@ -23,28 +26,27 @@ $btn-border-radius: 50px;
 @import "../bootstrap/scss/variables";
 @import "../bootstrap/scss/variables-dark";
 
+$card-bg: $dark;
+$card-color: $info;
+
 // 4. Include any default map overrides here
 //font sizes
-$font-sizes: map-merge(
-  $font-sizes,
-  (
-    7: 0.8rem,
-    8: 0.7rem,
-    9: 0.6rem,
-    10: 0.5rem,
-  )
+$font-sizes-custom: (
+  7: 0.8rem,
+  8: 0.7rem,
+  9: 0.6rem,
+  10: 0.5rem,
 );
+$font-sizes: map-merge($font-sizes, $font-sizes-custom);
 //borders
-$border-widths: map-merge(
-  $border-widths,
-  (
-    6: 6px,
-    7: 7px,
-    8: 8px,
-    9: 9px,
-    10: 10px,
-  )
+$border-customs: (
+  6: 6px,
+  7: 7px,
+  8: 8px,
+  9: 9px,
+  10: 10px,
 );
+$border-widths: map-merge($border-widths, $border-customs);
 
 $custom-colors: (
   epicode-1: #5726c3,
